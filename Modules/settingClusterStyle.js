@@ -16,7 +16,7 @@ function earthquakesClusterStyle(cluster, icon, sizeOfIcon, sizeOfText) {
     icon = "1.png";
     sizeOfIcon = 0.12;
     sizeOfText = 1.2;
-  } else if (eachFeature.get("mag") > 3.5 && eachFeature.get("mag") < 5) {
+  } else if (eachFeature.get("mag") > 3.5 && eachFeature.get("mag") <= 5) {
     console.log(eachFeature.get("mag"));
     icon = "2.png";
     sizeOfIcon = 0.15;
