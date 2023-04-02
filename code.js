@@ -40,7 +40,7 @@ var attributeControl = new ol.control.Attribution();
 
 const lightStabia = new ol.layer.Tile({
   source: new ol.source.XYZ({
-    url: "https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}.png",
+    url: "https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}.png?api_key=1c323ad5-74e3-4b80-b8bb-d337f1e29f05",
   }),
   layerName: "stadia",
   visible: true,
@@ -48,7 +48,7 @@ const lightStabia = new ol.layer.Tile({
 
 const stadia = new ol.layer.Tile({
   source: new ol.source.XYZ({
-    url: "https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}.png",
+    url: "https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}.png?api_key=1c323ad5-74e3-4b80-b8bb-d337f1e29f05",
   }),
   layerName: "stadia",
   visible: false,
