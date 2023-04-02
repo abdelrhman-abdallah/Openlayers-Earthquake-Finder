@@ -38,8 +38,11 @@ const map = new ol.Map({
 var fullscreenControl = new ol.control.FullScreen();
 var attributeControl = new ol.control.Attribution();
 
-const osm = new ol.layer.Tile({
-  source: new ol.source.OSM(),
+const lightStabia = new ol.layer.Tile({
+  source: new ol.source.XYZ({
+    url: "https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}.png?api_key=1c323ad5-74e3-4b80-b8bb-d337f1e29f05",
+  }),
+  layerName: "stadia",
   visible: true,
 });
 
@@ -51,7 +54,7 @@ const stadia = new ol.layer.Tile({
   visible: false,
 });
 
-map.addLayer(osm);
+map.addLayer(lightStabia);
 map.addLayer(stadia);
 
 map.addControl(attributeControl);
@@ -210,7 +213,7 @@ const enableDarkMode = () => {
   toggleText.style.color = "#222831";
   toggleText.style.backgroundColor = "#eee";
   stadia.setVisible(true);
-  osm.setVisible(false);
+  lightStabia.setVisible(false);
   document.querySelector(".sub").style.color = "black";
   header.style.color = "black";
 };
@@ -224,7 +227,7 @@ const disableDarkMode = () => {
   toggleText.style.color = "#eee";
   toggleText.style.backgroundColor = "#222831";
   stadia.setVisible(false);
-  osm.setVisible(true);
+  lightStabia.setVisible(true);
   header.style.color = "white";
   document.querySelector(".sub").style.color = "white";
 };
